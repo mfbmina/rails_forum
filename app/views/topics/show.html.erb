@@ -1,0 +1,49 @@
+<div class="col-md-12">
+  <h2>
+    <%= @topic.subject %>
+    <div class="pull-right">
+      <%= link_to "Back", topics_path, class: "btn btn-default btn-link" %>
+    </div>
+  </h2>
+
+  <hr>
+
+  <% @topic.posts.each do |post| %>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">
+          <%= post.user.username %>
+          <p class="pull-right"><%= post.updated_at %></p>
+        </h3>
+      </div>
+      <div class="panel-body">
+        <%= post.content %>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">
+        Reply this topic
+      </h3>
+    </div>
+    <div class="panel-body">
+      <% if user_signed_in? %>
+        <%= form_for @topic.posts.build, url: topic_posts_path(@topic) do |f| %>
+          <%= render 'posts/form', f: f %>
+
+          <%= submit_tag 'Post', class: "btn btn-block btn-primary" %>
+        <% end %>
+      <% else %>
+        <p>
+          Please
+          <%= link_to "log in", new_user_session_path %>
+          or
+          <%= link_to "sign up", new_user_registration_path %>
+          to reply this topic.
+        </p>
+      <% end %>
+    </div>
+  </div>
+</div>

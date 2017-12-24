@@ -21,6 +21,10 @@
       </tbody>
     </table>
   </div>
-  <hr>
-  <%= link_to 'New', new_topic_path, class: "btn btn-block btn-primary" %>
+
+  <% if user_signed_in? %>
+    <hr>
+
+    <%= link_to 'New', new_topic_path, class: "btn btn-block btn-primary" %>
+  <% end %>
 </div>

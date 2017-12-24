@@ -1,5 +1,7 @@
 class TopicsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index]
+  skip_before_action :authenticate_user!, only: [:index, :show]
+
+  before_action :find_topic, only: [:show]
 
   def index
     @topics = Topic.all
@@ -8,6 +10,9 @@ class TopicsController < ApplicationController
   def new
     @topic = Topic.new
     @topic.posts.build
+  end
+
+  def show
   end
 
   def create
@@ -23,5 +28,9 @@ class TopicsController < ApplicationController
 
   def topic_params
     params.require(:topic).permit(:subject, posts_attributes: [:id, :content])
+  end
+
+  def find_topic
+    @topic = Topic.find(params[:id])
   end
 end
