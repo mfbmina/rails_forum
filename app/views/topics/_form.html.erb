@@ -1,0 +1,14 @@
+<%= form_for @topic do |f| %>
+  <div class="form-group">
+    <%= f.label :subject %>
+    <%= f.text_field :subject, class: "form-control", placeholder: "Subject" %>
+  </div>
+
+  <%= f.fields_for :posts do |post| %>
+    <% render 'posts/form', f: post %>
+  <% end %>
+
+  <hr>
+
+  <%= f.submit 'Save', class: "btn btn-primary btn-block"%>
+<% end %>
