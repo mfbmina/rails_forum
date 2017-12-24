@@ -13,21 +13,7 @@
   <hr>
 
   <% @topic.posts.each do |post| %>
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title">
-          <%= post.user.username %>
-        </h3>
-        <% if post_author?(post) %>
-          <%= link_to "Delete", topic_post_path(@topic, post), method: :delete %>
-          <%= link_to "Edit", edit_topic_post_path(@topic, post) %>
-        <% end %>
-        <p><%= post.updated_at %></p>
-      </div>
-      <div class="panel-body">
-        <%= post.content %>
-      </div>
-    </div>
+    <%= render "posts/panel", post: post %>
   <% end %>
 
   <div class="panel panel-default">

@@ -15,7 +15,7 @@
             <td><%= link_to topic.subject, topic_path(topic) %></td>
             <td><%= topic.posts.first.content %></td>
             <td><%= topic.user.username %></td>
-            <td><%= topic.posts.count %></td>
+            <td class="text-center"><%= topic.posts.count %></td>
           </tr>
         <% end %>
       </tbody>
