@@ -8,24 +8,27 @@ class PostsController < ApplicationController
   def create
     post = ReplyTopic.new(current_user, @topic, post_params).call
     if post.persisted?
-      redirect_to topic_path(@topic)
+      redirect_to topic_path(@topic), notice: 'Topic replied successfully.'
     else
+      flash.now[:alert] = 'Error replying this topic.'
       render 'topics/show'
     end
   end
 
   def update
     if @post.update_attributes(post_params)
-      redirect_to topic_path(@topic)
+      redirect_to topic_path(@topic), notice: 'Post updated successfully.'
     else
+      flash.now[:alert] = 'Error updating this post.'
       render :edit
     end
   end
 
   def destroy
     if @post.destroy
-      redirect_to topic_path(@topic)
+      redirect_to topic_path(@topic), notice: 'Post deleted successfully.'
     else
+      flash.now[:alert] = 'Error deleting this post.'
       render 'topics/show'
     end
   end
