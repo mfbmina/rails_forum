@@ -1,5 +1,9 @@
 {
   "name": "rails_forum",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "jquery": "^3.2.1",
+    "jquery-ujs": "^1.2.2"
+  }
 }

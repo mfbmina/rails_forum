@@ -1,0 +1,81 @@
+@import "bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
+@import "bootstrap-sass/assets/stylesheets/bootstrap";
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  background-color: #373737;
+  z-index: 99999999;
+  color: rgba(255,255,255,0.6);
+  text-align: center;
+  font-size: 1.28333rem;
+  line-height: 1.5rem;
+  font-style: normal;
+}
+.footer p{ margin-top: 20px; margin-bottom: 3px;}
+img { max-width:100%; }
+
+.jumbotron{
+  background-color: #EFF4FA;
+  padding-bottom: 0;
+  margin-bottom: -90px;
+
+  h1{
+    padding-top: 30px;
+    font-size: 2.9rem;
+    margin-top: 12px;
+    font-weight: 400;
+    line-height: 32px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    font-family: "Lato", sans-serif;
+  }
+
+  h2{ font-size: 1.7rem; }
+}
+
+@media screen and (min-width: 768px){
+  .jumbotron { padding-top: 121px;height: 600px; }
+}
+.breadcrumb {
+  padding-left: 0;
+  background-color: #EFF4FA;
+  font-size: 12px;
+  a{ color: #ff6600; }
+}
+.wrapper{ margin: 70px 0 90px; }
+.no-margin-top{margin-top: 0;}
+.btn-primary{ background-color: #008cfa; border:none; text-transform: uppercase; padding: 10px 12px; font-weight: 700;}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active{ background-color: #008cfa; }
+@media only screen and (max-device-width: 480px) { .wrapper{ margin: 90px 0 90px; }}
+.navbar{min-height: 80px;}
+.navbar-header{min-width: 200px;padding: 15px 0 0;}
+.navbar-right{padding: 10px 0;}
+.navbar-default{background-color: #FAFAFA;}
+.navbar-brand { padding: 0px;}
+.navbar-brand > img { height: 100%;width: 62px;display: inline-block;}
+.navbar-brand span{
+  color: #454545;
+  left: 0;
+  top: 32px;
+  font-size: 31px;
+  letter-spacing: -1px;
+  position: absolute;
+  margin: 0;
+  padding-left: 55px;
+  font-weight: 900;
+  text-decoration: none;
+}
+.nav > li > a { padding: 0px 10px 15px; color: #666766; }
+.nav > li:first-child > a { padding-left: 0; }
+.nav > li a:hover, .nav > li > a:focus { text-decoration: none;background-color: #FAFAFA;color: #ff6600;}
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus { background-color: #FAFAFA;}
+.step-box{text-align: center;color: #0569d8;max-width: 130px;margin: 0 auto;}
+.checkbox{ border: 1px solid #d2d2d2;border-radius: 3px 3px 0 0;padding: 10px;margin:0;border-top: 0;}
+.checkbox:first-child, :not(.checkbox) + .checkbox{ border-top: 1px solid #d2d2d2;}
+.checkbox + .checkbox{margin-top: 0}
+.checkbox label{ width: 100%; }
+.checkbox input:checked{background-color: #000;}
