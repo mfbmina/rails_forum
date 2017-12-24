@@ -4,7 +4,7 @@
     <%= f.text_field :subject, class: "form-control", placeholder: "Subject" %>
   </div>
 
-  <%= f.fields_for :posts do |post| %>
+  <%= f.fields_for :posts, @topic.posts.first do |post| %>
     <% render 'posts/form', f: post %>
   <% end %>
 
