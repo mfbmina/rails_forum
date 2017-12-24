@@ -1,0 +1,16 @@
+<div class="col-md-12">
+  <h2>
+    Edit post
+    <div class="pull-right">
+      <%= link_to "Back", topic_path(@topic), class: "btn btn-default btn-link" %>
+    </div>
+  </h2>
+
+  <hr>
+
+  <%= form_for @post, url: topic_post_path(@topic, @post) do |f| %>
+    <%= render 'posts/form', f: f %>
+
+    <%= submit_tag 'Edit', class: "btn btn-block btn-primary" %>
+  <% end %>
+</div>

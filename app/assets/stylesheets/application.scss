@@ -1,6 +1,17 @@
 @import "bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
 @import "bootstrap-sass/assets/stylesheets/bootstrap";
 
+.panel-heading {
+  h3, p {
+    display: inline-block;
+  }
+
+  p, a {
+    float: right;
+    margin: 0px 5px;
+  }
+}
+
 .footer {
   margin-top: 20px;
   bottom: 0;
