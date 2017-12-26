@@ -34,6 +34,10 @@
     </table>
   </div>
 
+  <div class="text-center">
+    <%= paginate @topics %>
+  </div>
+
   <% if user_signed_in? %>
     <hr>
 
