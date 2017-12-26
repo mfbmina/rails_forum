@@ -4,7 +4,8 @@ class TopicsController < ApplicationController
   before_action :find_topic, except: [:index, :new, :create]
 
   def index
-    @topics = Topic.all
+    @topics = Topic.like(params[:q]) if params[:q].present?
+    @topics ||= Topic.all
   end
 
   def new

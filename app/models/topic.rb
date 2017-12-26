@@ -5,4 +5,6 @@ class Topic < ApplicationRecord
   validates :subject, presence: true
 
   accepts_nested_attributes_for :posts
+
+  scope :like, ->(query) { where("subject ILIKE ?", "%#{query}%") }
 end
