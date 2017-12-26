@@ -1,0 +1,21 @@
+<div class="panel panel-default">
+  <div class="panel-heading inline-div">
+    <%= link_to topic_path(topic), class: 'title' do %>
+      <h3 class="panel-title">
+        <%= topic.subject %>
+      </h3>
+    <% end %>
+    <p class="pull-right"><%= l topic.updated_at.to_date %></p>
+  </div>
+
+  <div class="panel-body">
+    <p><%= topic.posts.first.content %></p>
+
+    <hr>
+
+    <small class="inline-div">
+      <p><%= topic.user.username %></p>
+      <p class="pull-right">Replies: <%= topic.posts.count %></p>
+    </small>
+  </div>
+</div>

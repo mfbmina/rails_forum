@@ -13,26 +13,9 @@
 
   <hr>
 
-  <div class="table-responsive">
-    <table class="table table-striped table-hover table-condensed">
-      <thead>
-        <th>Subject</th>
-        <th>Content</th>
-        <th>Author</th>
-        <th>Posts</th>
-      </thead>
-      <tbody>
-        <% @topics.each do |topic| %>
-          <tr>
-            <td><%= link_to topic.subject, topic_path(topic) %></td>
-            <td><%= topic.posts.first.content %></td>
-            <td><%= topic.user.username %></td>
-            <td class="text-center"><%= topic.posts.count %></td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
-  </div>
+  <% @topics.each do |topic| %>
+    <%= render 'panel', topic: topic %>
+  <% end %>
 
   <div class="text-center">
     <%= paginate @topics %>

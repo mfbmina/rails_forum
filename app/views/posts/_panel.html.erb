@@ -1,13 +1,16 @@
 <div class="panel panel-default">
-  <div class="panel-heading">
+  <div class="panel-heading inline-div">
     <h3 class="panel-title">
       <%= post.user.username %>
     </h3>
-    <% if post_author?(post) %>
-      <%= link_to "Delete", topic_post_path(@topic, post), id: 'delete_post', method: :delete, data: { confirm: "Are you sure?" } %>
-      <%= link_to "Edit", edit_topic_post_path(@topic, post), id: 'edit_post' %>
-    <% end %>
-    <p><%= l post.updated_at %></p>
+
+    <div class="pull-right">
+      <p><%= l post.updated_at.to_date %></p>
+      <% if post_author?(post) %>
+        <%= link_to "Edit", edit_topic_post_path(@topic, post), id: 'edit_post', class: 'actions' %>
+        <%= link_to "Delete", topic_post_path(@topic, post), id: 'delete_post', method: :delete, class: 'actions', data: { confirm: "Are you sure?" } %>
+      <% end %>
+    </div>
   </div>
   <div class="panel-body">
     <p><%= post.content %></p>

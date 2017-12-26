@@ -1,14 +1,35 @@
 @import "bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
 @import "bootstrap-sass/assets/stylesheets/bootstrap";
 
-.panel-heading {
-  h3, p {
+.inline-div {
+  h3 {
     display: inline-block;
   }
 
-  p, a {
-    float: right;
+  p {
     margin: 0px 5px;
+    display: inline-block;
+    font-size: small;
+  }
+}
+
+a.title {
+  text-decoration: none;
+  color: black;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+a.actions {
+  text-decoration: none;
+  color: #337ab7;
+  margin: 0px 5px;
+  font-size: small;
+
+  &:hover {
+    opacity: 0.5;
   }
 }
 
@@ -20,8 +41,8 @@
   background-color: #373737;
   color: rgba(255,255,255,0.6);
   text-align: center;
-}
 
-.footer p {
-  margin: 0 auto;
+  p {
+    margin: 0 auto;
+  }
 }

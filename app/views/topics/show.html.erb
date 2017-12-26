@@ -2,10 +2,10 @@
   <h2>
     <%= @topic.subject %>
     <div class="pull-right">
-      <%= link_to "Back", topics_path, class: "btn btn-default btn-link" %>
+      <%= link_to "Back", topics_path, class: "actions" %>
       <% if topic_author?(@topic) %>
-        <%= link_to "Edit", edit_topic_path(@topic), id: 'edit_topic', class: "btn btn-default btn-link" %>
-        <%= link_to "Delete", topic_path(@topic), id: 'delete_topic', method: :delete, class: "btn btn-default btn-link", data: { confirm: "Are you sure?" } %>
+        <%= link_to "Edit", edit_topic_path(@topic), id: 'edit_topic', class: "actions" %>
+        <%= link_to "Delete", topic_path(@topic), id: 'delete_topic', method: :delete, class: "actions", data: { confirm: "Are you sure?" } %>
       <% end %>
     </div>
   </h2>
