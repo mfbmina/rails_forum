@@ -1,8 +1,21 @@
 <footer class="footer">
   <div class="container">
-    <div class="row">
-      <p>All rights reserved © <%= Date.current.year %> - <span>mfbmina@gmail.com</span>  </p>
+    <hr>
 
+    <div class="row">
+      <div class="col-md-4">
+        <p>© <%= Date.current.year %> All rights reserved</p>
+      </div>
+
+      <div class="col-md-4 text-center">
+        <%= link_to 'Matheus Mina', 'mailto:mfbmina@gmail.com', target: '_top', class: 'title' %>
+      </div>
+
+      <div class="col-md-4 text-right">
+          <%= link_to 'GitHub', 'https://github.com/mfbmina', target: '_blank', class: 'actions' %>
+          <%= link_to 'LinkedIn', 'https://www.linkedin.com/in/mfbmina/', target: '_blank', class: 'actions' %>
+          <%= link_to 'Twitter', 'https://twitter.com/mfbmina', target: '_blank', class: 'actions' %>
+      </div>
     </div>
   </div>
 </footer>

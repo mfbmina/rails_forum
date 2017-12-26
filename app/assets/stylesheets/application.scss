@@ -15,7 +15,7 @@
 
 a.title {
   text-decoration: none;
-  color: black;
+  color: #333333;
 
   &:hover {
     opacity: 0.5;
@@ -35,14 +35,10 @@ a.actions {
 
 .footer {
   margin-top: 20px;
-  padding: 20px;
-  bottom: 0;
+  padding: 40px 20px;
   width: 100%;
-  background-color: #373737;
-  color: rgba(255,255,255,0.6);
-  text-align: center;
 
-  p {
-    margin: 0 auto;
+  a {
+    margin: 0px 5px;
   }
 }
