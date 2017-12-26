@@ -4,8 +4,8 @@
       <%= post.user.username %>
     </h3>
     <% if post_author?(post) %>
-      <%= link_to "Delete", topic_post_path(@topic, post), method: :delete %>
-      <%= link_to "Edit", edit_topic_post_path(@topic, post) %>
+      <%= link_to "Delete", topic_post_path(@topic, post), id: 'delete_post', method: :delete, data: { confirm: "Are you sure?" } %>
+      <%= link_to "Edit", edit_topic_post_path(@topic, post), id: 'edit_post' %>
     <% end %>
     <p><%= l post.updated_at %></p>
   </div>

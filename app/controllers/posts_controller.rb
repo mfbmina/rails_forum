@@ -10,6 +10,7 @@ class PostsController < ApplicationController
     if post.persisted?
       redirect_to topic_path(@topic), notice: 'Topic replied successfully.'
     else
+      @topic.reload
       flash.now[:alert] = 'Error replying this topic.'
       render 'topics/show'
     end

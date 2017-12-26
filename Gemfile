@@ -52,6 +52,8 @@ group :test do
   gem 'database_cleaner'
   gem 'rspec-rails'
   gem 'factory_bot_rails'
+  gem 'capybara'
+  gem 'poltergeist'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

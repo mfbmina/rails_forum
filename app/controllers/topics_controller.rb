@@ -21,7 +21,7 @@ class TopicsController < ApplicationController
   def create
     @topic = CreateTopic.new(current_user, topic_params).call
     if @topic.persisted?
-      redirect_to topics_path, notice: 'Topic created successfully.'
+      redirect_to topic_path(@topic), notice: 'Topic created successfully.'
     else
       flash.now[:alert] = 'Error creating a topic.'
       render :new
