@@ -13,6 +13,19 @@
 
   <hr>
 
+  <% if @topics.blank? %>
+    <div class="panel panel-default">
+      <div class="panel-heading inline-div">
+        <h3 class="panel-title">
+          We couldn’t find any topics!
+        </h3>
+      </div>
+      <div class="panel-body">
+        <p>Why not be the first to ask?</p>
+      </div>
+    </div>
+  <% end %>
+
   <% @topics.each do |topic| %>
     <%= render 'panel', topic: topic %>
   <% end %>

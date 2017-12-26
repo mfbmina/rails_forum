@@ -42,4 +42,13 @@ describe "searching for a topic", type: :feature do
       expect(page).to have_content 'My topic 2'
     end
   end
+
+  context 'with a common term' do
+    it "find all common topics" do
+      visit '/'
+      fill_in 'search_topic', with: 'xxxxxxxxxxxxxx'
+      click_on 'Search'
+      expect(page).to have_content 'We couldn’t find any topics!'
+    end
+  end
 end
