@@ -61,6 +61,7 @@ RSpec.configure do |config|
   # config.filter_gems_from_backtrace("gem name")
 
   Capybara.javascript_driver = :poltergeist
+  Capybara.raise_server_errors = false
 
   config.include Devise::Test::IntegrationHelpers, type: :feature
 

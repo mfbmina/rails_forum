@@ -1,5 +1,17 @@
 @import "bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
 @import "bootstrap-sass/assets/stylesheets/bootstrap";
+@import "summernote/dist/summernote";
+
+@font-face {
+  font-family: 'summernote';
+  src: font-url('summernote/dist/font/summernote.eot');
+  src: font-url('summernote/dist/font/summernote.eot?#iefix') format('embedded-opentype'),
+      font-url('summernote/dist/font/summernote.ttf') format('truetype'),
+      font-url('summernote/dist/font/summernote.woff') format('woff'),
+      font-url('summernote/dist/font/summernote.svg#summernote') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
 .inline-div {
   h3 {

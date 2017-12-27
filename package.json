@@ -6,7 +6,8 @@
     "bootstrap-sass": "^3.3.7",
     "coffeescript": "1.12.7",
     "jquery": "^3.2.1",
-    "jquery-ujs": "^1.2.2"
+    "jquery-ujs": "^1.2.2",
+    "summernote": "^0.8.9"
   },
   "devDependencies": {
     "webpack-dev-server": "^2.9.7"
