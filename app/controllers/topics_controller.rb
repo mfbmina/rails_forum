@@ -5,7 +5,7 @@ class TopicsController < ApplicationController
 
   def index
     page = params[:page] || 1
-    @topics = Topic.like(params[:q]).page(page)
+    @topics = Topic.like(params[:q]).order(id: :desc).page(page)
   end
 
   def new
